@@ -15,6 +15,9 @@ namespace Trendyol.UnitTest
         {
         }
 
+        /// <summary>
+        /// get siteName parameter for Service-A
+        /// </summary>
         [TestMethod]
         public void TestMethod_GetValue_ServiceA()
         {
@@ -23,6 +26,9 @@ namespace Trendyol.UnitTest
             Assert.AreEqual("trendyol.com", siteName);
         }
 
+        /// <summary>
+        /// get IsBasketEnabled parameter for Service-B
+        /// </summary>
         [TestMethod]
         public void TestMethod_GetValue_ServiceB()
         {
@@ -31,6 +37,9 @@ namespace Trendyol.UnitTest
             Assert.AreEqual(true, isBasketEnabled);
         }
 
+        /// <summary>
+        /// Create configurationReader and use it for 5 seconds. ConfigurationReader will go to the database for 5 times to refresh its cached data regarding 1000ms.
+        /// </summary>
         [TestMethod]
         public void TestMethodIntervalRefresh()
         {
